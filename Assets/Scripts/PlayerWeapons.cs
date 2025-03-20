@@ -17,10 +17,8 @@ public class PlayerWeapons : MonoBehaviour
     {
         if (Input.GetKey("space"))
         {
-            {
-                GameObject clone;
-                clone = Instantiate(projectile, player.transform.position + offset, player.transform.rotation);
-            }
+            GameObject clone;
+            clone = Instantiate(projectile, player.transform.position + offset, player.transform.rotation);
         }
     }
 }
