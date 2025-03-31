@@ -2763,6 +2763,7 @@ GameObject:
   - component: {fileID: 1886180588}
   - component: {fileID: 1886180587}
   - component: {fileID: 1886180591}
+  - component: {fileID: 1886180592}
   m_Layer: 0
   m_Name: Player_Ship
   m_TagString: Untagged
@@ -2876,6 +2877,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   turnSpeed: 40
+--- !u!114 &1886180592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1886180586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5809cf36e6d87e4482485b4ef4400c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shield: 100
+  health: 300
+  hurtMaterial: {fileID: 2100000, guid: 2e9f05acf7a57e54d81590a6eb0c2de0, type: 2}
+  shipMaterial: {fileID: 2100000, guid: cfc615809e562e348a9d9943252d00e9, type: 2}
+  shieldMaterial: {fileID: 2100000, guid: df814dcfb2e6d19499faf6263eddafdf, type: 2}
 --- !u!1 &2066256594
 GameObject:
   m_ObjectHideFlags: 0
