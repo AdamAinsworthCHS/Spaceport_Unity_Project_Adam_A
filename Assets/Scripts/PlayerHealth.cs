@@ -8,8 +8,8 @@ public class PlayerHealth : MonoBehaviour
         
     }
 
-    public float shield = 100;
-    public float health = 300;
+    public static float shield = 100;
+    public static float health = 300;
     public Material hurtMaterial;
     public Material shipMaterial;
     public Material shieldMaterial;
@@ -19,6 +19,10 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (shield < 0)
+        {
+            shield = 0;
+        }
         if (health <= 0)
         {
             Destroy(gameObject);
