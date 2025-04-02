@@ -566,10 +566,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 330585543}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dc069c932907824aa7418e10c664b24, type: 3}
+  m_Script: {fileID: 11500000, guid: 97218d21f79ac494bb8570ad5b81d8e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1886180586}
+  target: {fileID: 1886180590}
+  offsetPosition: {x: 0, y: 4, z: 1}
+  offsetPositionSpace: 1
+  lookAt: 0
 --- !u!1 &377052978
 GameObject:
   m_ObjectHideFlags: 0
