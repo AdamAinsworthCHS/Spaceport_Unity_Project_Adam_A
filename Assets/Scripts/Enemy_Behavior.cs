@@ -25,6 +25,7 @@ public class Enemy_Behavior : MonoBehaviour
         }
         if (health <= 0)
         {
+            LevelManager.money += 25;
             Destroy(gameObject);
         }
         if (timeStamp <= Time.time)
