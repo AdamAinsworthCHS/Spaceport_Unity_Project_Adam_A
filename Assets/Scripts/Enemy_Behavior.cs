@@ -19,7 +19,7 @@ public class Enemy_Behavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.x > player.transform.position.x + 10 || transform.position.y > player.transform.position.y + 10 || transform.position.z > player.transform.position.z + 10)
+        if (transform.position.x > player.transform.position.x + 4 || transform.position.y > player.transform.position.y + 4 || transform.position.z > player.transform.position.z + 4)
         {
             transform.Translate(Vector3.up * Time.deltaTime * speed);
         }
