@@ -16,7 +16,15 @@ public class ShopManager : MonoBehaviour
     {
         itemIdOne = Random.Range(1, 5);
         itemIdTwo = Random.Range(1, 5);
+        while (itemIdTwo == itemIdOne)
+        {
+            itemIdTwo = Random.Range(1, 5);
+        }
         itemIdThree = Random.Range(1, 5);
+        while (itemIdThree == itemIdOne || itemIdThree == itemIdTwo)
+        {
+            itemIdThree = Random.Range(1, 5);
+        }
     }
     
     // Update is called once per frame

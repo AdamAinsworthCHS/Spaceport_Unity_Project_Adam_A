@@ -9,7 +9,9 @@ public class PlayerHealth : MonoBehaviour
     }
 
     public static float shield = 100;
+    public static float maxShield = 100;
     public static float health = 300;
+    public static float maxHealth = 300;
     public Material hurtMaterial;
     public Material shipMaterial;
     public Material shieldMaterial;
@@ -27,7 +29,7 @@ public class PlayerHealth : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        if (shield < 100)
+        if (shield < maxShield)
         {
             if (shieldTimeStamp <= Time.time)
             {

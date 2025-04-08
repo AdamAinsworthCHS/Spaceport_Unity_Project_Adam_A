@@ -10,6 +10,7 @@ public class PlayerWeapons : MonoBehaviour
 
     public GameObject projectile;
     public GameObject player;
+    public static float damage = 1;
     private Vector3 offset = new Vector3(0, 0, 0);
 
     // Update is called once per frame

@@ -1,34 +1,40 @@
-using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
-public class ButtonOneText : MonoBehaviour
+public class ShopButtonOne : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public Button button;
+
     void Start()
     {
-
+        button.onClick.AddListener(TaskOnClick);
     }
 
     // Update is called once per frame
     void Update()
     {
+        
+    }
+
+    void TaskOnClick()
+    {
+        LevelManager.money -= 100;
         if (ShopManager.itemIdOne == 1)
         {
-            GetComponent<TMPro.TextMeshProUGUI>().text = "Thruster Boost" + " for sale!";
+            PlayerController.speed += 3;
         }
         else if (ShopManager.itemIdOne == 2)
         {
-            GetComponent<TMPro.TextMeshProUGUI>().text = "Laser Concentrater" + " for sale!";
+            PlayerWeapons.damage += 0.5f;
         }
         else if (ShopManager.itemIdOne == 3)
         {
-            GetComponent<TMPro.TextMeshProUGUI>().text = "Shields Booster" + " for sale!";
+            PlayerHealth.maxShield += 25;
         }
         else
         {
-            GetComponent<TMPro.TextMeshProUGUI>().text = "Hull Reinforcement" + " for sale!";
+            PlayerHealth.maxHealth += 50;
         }
     }
 }

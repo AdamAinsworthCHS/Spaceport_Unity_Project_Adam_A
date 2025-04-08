@@ -38,7 +38,7 @@ public class Enemy_Behavior : MonoBehaviour
     {
         if (other.gameObject.tag.Equals("Player Projectile") == true)
         {
-            health--;
+            health -= PlayerWeapons.damage;
             GetComponent<Renderer>().material = hurtMaterial;
         }
     }
