@@ -15,6 +15,7 @@ public class EnemySpawning : MonoBehaviour
     private int yPos;
     private int zPos;
     private float timeStamp = 0;
+    public static float spawnTime = 1.5f;
     private Vector3 offset = new Vector3(0, 0, 0);
 
     // Update is called once per frame
@@ -38,7 +39,7 @@ public class EnemySpawning : MonoBehaviour
             }
             offset = new Vector3(xPos, yPos, zPos);
             clone = Instantiate(enemy, player.transform.position + offset, player.transform.rotation);
-            timeStamp = Time.time + 1f;
+            timeStamp = Time.time + spawnTime;
         }
     }
 }

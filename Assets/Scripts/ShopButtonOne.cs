@@ -19,22 +19,25 @@ public class ShopButtonOne : MonoBehaviour
 
     void TaskOnClick()
     {
-        LevelManager.money -= 100;
-        if (ShopManager.itemIdOne == 1)
+        if (LevelManager.money >= 100)
         {
-            PlayerController.speed += 3;
-        }
-        else if (ShopManager.itemIdOne == 2)
-        {
-            PlayerWeapons.damage += 0.5f;
-        }
-        else if (ShopManager.itemIdOne == 3)
-        {
-            PlayerHealth.maxShield += 25;
-        }
-        else
-        {
-            PlayerHealth.maxHealth += 50;
+            LevelManager.money -= 100;
+            if (ShopManager.itemIdOne == 1)
+            {
+                PlayerController.speed += 3;
+            }
+            else if (ShopManager.itemIdOne == 2)
+            {
+                PlayerWeapons.damage += 0.5f;
+            }
+            else if (ShopManager.itemIdOne == 3)
+            {
+                PlayerHealth.maxShield += 25;
+            }
+            else
+            {
+                PlayerHealth.maxHealth += 50;
+            }
         }
     }
 }

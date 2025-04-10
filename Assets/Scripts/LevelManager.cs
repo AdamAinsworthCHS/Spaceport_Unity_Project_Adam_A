@@ -11,7 +11,8 @@ public class LevelManager : MonoBehaviour
 
     public static float level = 1;
     public static float money = 0;
-    public static float survival_time = 20;
+    public static float survivalTime = 20;
+    public static float baseTime = 20;
     private float timeStamp = 0;
 
     // Update is called once per frame
@@ -19,11 +20,11 @@ public class LevelManager : MonoBehaviour
     {
         if (timeStamp <= Time.time)
         {
-            survival_time--;
+            survivalTime--;
             timeStamp = Time.time + 1f;
         }
 
-        if (survival_time <= 0)
+        if (survivalTime <= 0)
         {
             level++;
             SceneManager.LoadScene("Shop");

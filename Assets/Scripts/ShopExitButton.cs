@@ -22,7 +22,15 @@ public class ShopExitButton : MonoBehaviour
     {
         PlayerHealth.health = PlayerHealth.maxHealth;
         PlayerHealth.shield = PlayerHealth.maxShield;
-        LevelManager.survival_time = 20;
+        if (LevelManager.baseTime < 100)
+        {
+            LevelManager.baseTime += 10;
+        }
+        LevelManager.survivalTime = LevelManager.baseTime;
+        if (EnemySpawning.spawnTime > 0.7)
+        {
+            EnemySpawning.spawnTime -= 0.1f;
+        }
         SceneManager.LoadScene("SampleScene");
     }
 }

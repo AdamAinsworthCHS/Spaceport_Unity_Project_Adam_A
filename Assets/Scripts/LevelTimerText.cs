@@ -13,6 +13,6 @@ public class LevelTimerText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GetComponent<TMPro.TextMeshProUGUI>().text = "Level ends in: " + LevelManager.survival_time;
+        GetComponent<TMPro.TextMeshProUGUI>().text = "Level ends in: " + LevelManager.survivalTime;
     }
 }
