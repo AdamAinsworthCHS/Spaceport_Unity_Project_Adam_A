@@ -10,7 +10,7 @@ public class EnemyHeavyBehavior : MonoBehaviour
         player = GameObject.Find("Player_Ship");
     }
 
-    public float speed = 1.0f;
+    public float speed = 2.0f;
     public float health = 200;
     public Material hurtMaterial;
     public Material shipMaterial;
