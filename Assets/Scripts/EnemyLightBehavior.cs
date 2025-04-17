@@ -1,17 +1,17 @@
 using UnityEngine;
 
-public class Enemy_Behavior : MonoBehaviour
+public class EnemyLightBehavior : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public GameObject player;
-    
+
     void Start()
     {
         player = GameObject.Find("Player_Ship");
     }
 
-    public float speed = 2.0f;
-    public float health = 100;
+    public float speed = 8.0f;
+    public float health = 60;
     public Material hurtMaterial;
     public Material shipMaterial;
     private float timeStamp = 0;

@@ -10,7 +10,10 @@ public class EnemySpawning : MonoBehaviour
 
     public GameObject player;
     public GameObject enemy;
+    public GameObject lightEnemy;
+    public GameObject heavyEnemy;
     private int randomDecider;
+    private int enemyType;
     private int xPos;
     private int yPos;
     private int zPos;
@@ -38,8 +41,20 @@ public class EnemySpawning : MonoBehaviour
                 zPos = Random.Range(-30, -10);
             }
             offset = new Vector3(xPos, yPos, zPos);
-            clone = Instantiate(enemy, player.transform.position + offset, player.transform.rotation);
-            timeStamp = Time.time + spawnTime;
+            enemyType = Random.Range(1, 4);
+            if (enemyType == 1)
+            {
+                clone = Instantiate(enemy, player.transform.position + offset, player.transform.rotation);
+            }
+            else if (enemyType == 2)
+            {
+                clone = Instantiate(lightEnemy, player.transform.position + offset, player.transform.rotation);
+            }
+            else
+            {
+                clone = Instantiate(heavyEnemy, player.transform.position + offset, player.transform.rotation);
+            }
+                timeStamp = Time.time + spawnTime;
         }
     }
 }
