@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 6157554187726014220}
   - component: {fileID: 3250347708058809356}
   - component: {fileID: 7437670156115207022}
-  - component: {fileID: 6069564501545125844}
+  - component: {fileID: 6912888480531229411}
   m_Layer: 0
-  m_Name: Projectile
+  m_Name: BigProjectile
   m_TagString: Player Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.18697794, y: -1.8256928, z: -14.961936}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.5}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 2.5}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4056005333656645072}
@@ -138,7 +138,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6069564501545125844
+--- !u!114 &6912888480531229411
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,11 +147,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6247779333137323576}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47a2c3bea9c3be1408b493bba3b07c46, type: 3}
+  m_Script: {fileID: 11500000, guid: 5cbb846c0c865424087d98c94d3c943b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  speed: 40
+  speed: 20
 --- !u!1 &6934905053130723177
 GameObject:
   m_ObjectHideFlags: 0

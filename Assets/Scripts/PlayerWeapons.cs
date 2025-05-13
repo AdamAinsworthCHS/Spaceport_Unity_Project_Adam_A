@@ -4,6 +4,7 @@ public class PlayerWeapons : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public GameObject projectile;
+    public GameObject bigProjectile;
     public GameObject player;
     public static float damage = 1;
     private Vector3 offset = new Vector3(0, 0, 0);
@@ -29,6 +30,11 @@ public class PlayerWeapons : MonoBehaviour
             damageMult = 16f;
             cooldown = 0.12f;
         }
+        if (weaponType == "Cannon")
+        {
+            damageMult = 24f;
+            cooldown = 0.3f;
+        }
         print(damage);
     }
 
@@ -40,7 +46,14 @@ public class PlayerWeapons : MonoBehaviour
             if (timeStamp <= Time.time)
             {
                 GameObject clone;
-                clone = Instantiate(projectile, player.transform.position + offset, player.transform.rotation);
+                if (weaponType == "Cannon")
+                {
+                    clone = Instantiate(bigProjectile, player.transform.position + offset, player.transform.rotation);
+                }
+                else
+                {
+                    clone = Instantiate(projectile, player.transform.position + offset, player.transform.rotation);
+                }
                 timeStamp = Time.time + cooldown;
             }
         }

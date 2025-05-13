@@ -30,9 +30,13 @@ public class ShopWeaponButton : MonoBehaviour
             {
                 PlayerWeapons.weaponType = "Turret";
             }
-            else
+            else if (ShopManager.itemIdThree == 3)
             {
                 PlayerWeapons.weaponType = "Sniper";
+            }
+            else
+            {
+                PlayerWeapons.weaponType = "Cannon";
             }
         }
     }

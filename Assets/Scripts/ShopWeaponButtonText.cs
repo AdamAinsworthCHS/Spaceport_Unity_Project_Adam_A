@@ -22,9 +22,13 @@ public class ShopWeaponButtonText : MonoBehaviour
         {
             GetComponent<TMPro.TextMeshProUGUI>().text = "Turret" + " for sale!";
         }
-        else
+        else if (ShopManager.weaponId == 3)
         {
             GetComponent<TMPro.TextMeshProUGUI>().text = "Sniper" + " for sale!";
+        }
+        else
+        {
+            GetComponent<TMPro.TextMeshProUGUI>().text = "Cannon" + " for sale!";
         }
     }
 }

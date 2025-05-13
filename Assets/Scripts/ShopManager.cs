@@ -18,7 +18,7 @@ public class ShopManager : MonoBehaviour
     {
         itemIdOne = Random.Range(1, 5);
         itemIdTwo = Random.Range(1, 5);
-        weaponId = Random.Range(1, 4);
+        weaponId = Random.Range(1, 5);
         if (PlayerWeapons.weaponType == "MachineGun")
         {
             weaponAvoid = 1;
@@ -27,9 +27,13 @@ public class ShopManager : MonoBehaviour
         {
             weaponAvoid = 2;
         }
-        else
+        else if (PlayerWeapons.weaponType == "Sniper")
         {
             weaponAvoid = 3;
+        }
+        else
+        {
+            weaponAvoid = 4;
         }
 
         while (itemIdTwo == itemIdOne)
@@ -43,7 +47,7 @@ public class ShopManager : MonoBehaviour
         }
         while (weaponId == weaponAvoid)
         {
-            weaponId = Random.Range(1, 4);
+            weaponId = Random.Range(1, 5);
         }
     }
     

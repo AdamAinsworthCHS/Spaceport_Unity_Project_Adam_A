@@ -1654,6 +1654,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 6247779333137323576, guid: e2d5e14984fd2b040928d36e9d58c1c4, type: 3}
+  bigProjectile: {fileID: 6247779333137323576, guid: 123a1a8cb2f417644b13e6563f50137f, type: 3}
   player: {fileID: 1863626066}
 --- !u!1 &1865372034
 GameObject:
