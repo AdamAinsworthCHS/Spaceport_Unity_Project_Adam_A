@@ -1593,6 +1593,7 @@ MonoBehaviour:
   player: {fileID: 1886180586}
   enemy: {fileID: 4907745274061155714, guid: 91c8d35cb497f5041b9e94012dc785cc, type: 3}
   lightEnemy: {fileID: 4907745274061155714, guid: d17450b31830e684799be143b3c93cce, type: 3}
+  heavyEnemy: {fileID: 4907745274061155714, guid: 029eb75dfa03b7343957b2ba72473a7e, type: 3}
 --- !u!4 &1629086305
 Transform:
   m_ObjectHideFlags: 0
