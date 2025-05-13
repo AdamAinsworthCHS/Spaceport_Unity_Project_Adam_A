@@ -11,11 +11,27 @@ public class ShopManager : MonoBehaviour
     public static int itemIdOne;
     public static int itemIdTwo;
     public static int itemIdThree;
+    public static int weaponId;
+    private static int weaponAvoid;
 
     void Awake()
     {
         itemIdOne = Random.Range(1, 5);
         itemIdTwo = Random.Range(1, 5);
+        weaponId = Random.Range(1, 4);
+        if (PlayerWeapons.weaponType == "MachineGun")
+        {
+            weaponAvoid = 1;
+        }
+        else if (PlayerWeapons.weaponType == "Turret")
+        {
+            weaponAvoid = 2;
+        }
+        else
+        {
+            weaponAvoid = 3;
+        }
+
         while (itemIdTwo == itemIdOne)
         {
             itemIdTwo = Random.Range(1, 5);
@@ -24,6 +40,10 @@ public class ShopManager : MonoBehaviour
         while (itemIdThree == itemIdOne || itemIdThree == itemIdTwo)
         {
             itemIdThree = Random.Range(1, 5);
+        }
+        while (weaponId == weaponAvoid)
+        {
+            weaponId = Random.Range(1, 4);
         }
     }
     

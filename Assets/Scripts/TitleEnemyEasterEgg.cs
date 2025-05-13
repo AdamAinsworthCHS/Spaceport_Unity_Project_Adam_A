@@ -32,7 +32,7 @@ public class TitleEnemyEasterEgg : MonoBehaviour
     {
         if (other.gameObject.tag.Equals("Player Projectile") == true)
         {
-            health -= PlayerWeapons.damage;
+            health -= PlayerWeapons.damage * PlayerWeapons.damageMult;
             GetComponent<Renderer>().material = hurtMaterial;
         }
     }
