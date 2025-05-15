@@ -3,9 +3,12 @@ using UnityEngine;
 public class EnemyHeavyWeapons : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public AudioClip enemyLaserSound;
+    private AudioSource enemyAudio;
+
     void Start()
     {
-
+        enemyAudio = GetComponent<AudioSource>();
     }
 
     public GameObject projectile;
@@ -20,6 +23,8 @@ public class EnemyHeavyWeapons : MonoBehaviour
         {
             GameObject clone;
             clone = Instantiate(projectile, enemy.transform.position + offset, enemy.transform.rotation);
+            enemyAudio.pitch = (Random.Range(0.8f, 1f));
+            enemyAudio.PlayOneShot(enemyLaserSound, 1.0f);
             timeStamp = Time.time + 1f;
         }
     }
