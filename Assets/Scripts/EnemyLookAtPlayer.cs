@@ -12,18 +12,11 @@ public class EnemyLookAtPlayer : MonoBehaviour
         player = GameObject.Find("Player_Ship");
         target = player.transform;
     }
-    
-    private float timeStamp = 0;
 
     // Update is called once per frame
     void Update()
     {
-        if (timeStamp <= Time.time)
-        {
-            transform.LookAt(target);
-            timeStamp = Time.time + 1f;
-            transform.Rotate(90, 0, 0);
-        }
-
+        transform.LookAt(target);
+        transform.Rotate(90, 0, 0);
     }
 }

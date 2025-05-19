@@ -28,6 +28,7 @@ public class PlayButton : MonoBehaviour
         LevelManager.survivalTime = LevelManager.baseTime;
         EnemySpawning.spawnTime = 1.5f;
         PlayerWeapons.damage = 1;
+        PlayerWeapons.weaponType = "Turret";
         PlayerController.speed = 5.0f;
         SceneManager.LoadScene("SampleScene");
     }
