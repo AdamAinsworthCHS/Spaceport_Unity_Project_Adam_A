@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class PlayButton : MonoBehaviour
+public class TutorialButton : MonoBehaviour
 {
     public Button button;
 
@@ -30,7 +30,7 @@ public class PlayButton : MonoBehaviour
         PlayerWeapons.damage = 1;
         PlayerWeapons.weaponType = "Turret";
         PlayerController.speed = 5.0f;
-        LevelManager.money = 0;
-        SceneManager.LoadScene("SampleScene");
+        TutorialManager.tutorialStatus = 0;
+        SceneManager.LoadScene("Tutorial");
     }
 }

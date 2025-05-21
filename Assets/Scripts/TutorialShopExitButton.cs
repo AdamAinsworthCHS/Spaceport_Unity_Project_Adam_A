@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class PlayButton : MonoBehaviour
+public class TutorialShopExitButton : MonoBehaviour
 {
     public Button button;
 
@@ -20,17 +20,18 @@ public class PlayButton : MonoBehaviour
 
     void TaskOnClick()
     {
-        PlayerHealth.maxShield = 100;
-        PlayerHealth.maxHealth = 300;
-        PlayerHealth.shield = PlayerHealth.maxShield;
         PlayerHealth.health = PlayerHealth.maxHealth;
-        LevelManager.baseTime = 20;
+        PlayerHealth.shield = PlayerHealth.maxShield;
+        if (LevelManager.baseTime < 100)
+        {
+            LevelManager.baseTime += 10;
+        }
         LevelManager.survivalTime = LevelManager.baseTime;
-        EnemySpawning.spawnTime = 1.5f;
-        PlayerWeapons.damage = 1;
-        PlayerWeapons.weaponType = "Turret";
-        PlayerController.speed = 5.0f;
-        LevelManager.money = 0;
-        SceneManager.LoadScene("SampleScene");
+        if (EnemySpawning.spawnTime > 0.7)
+        {
+            EnemySpawning.spawnTime -= 0.1f;
+        }
+        TutorialManager.tutorialStatus = 5;
+        SceneManager.LoadScene("Tutorial");
     }
 }
