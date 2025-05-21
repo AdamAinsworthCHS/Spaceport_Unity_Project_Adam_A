@@ -582,6 +582,7 @@ MonoBehaviour:
   health: 100
   hurtMaterial: {fileID: 2100000, guid: 2e9f05acf7a57e54d81590a6eb0c2de0, type: 2}
   shipMaterial: {fileID: 2100000, guid: be0ee02bda87cf749a125cde9cfb287f, type: 2}
+  explosion: {fileID: 9125212449759046732, guid: 745c610780f272546ab8faa114290559, type: 3}
 --- !u!1 &5661718351271434236
 GameObject:
   m_ObjectHideFlags: 0
@@ -643,7 +644,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0

@@ -31,6 +31,7 @@ public class TutorialButton : MonoBehaviour
         PlayerWeapons.weaponType = "Turret";
         PlayerController.speed = 5.0f;
         TutorialManager.tutorialStatus = 0;
+        LevelManager.money = 0;
         SceneManager.LoadScene("Tutorial");
     }
 }

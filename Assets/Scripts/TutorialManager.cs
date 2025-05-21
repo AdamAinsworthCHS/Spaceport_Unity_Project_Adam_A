@@ -73,7 +73,6 @@ public class TutorialManager : MonoBehaviour
                 clone = Instantiate(enemy, player.transform.position + new Vector3(0, -10, 0), player.transform.rotation);
                 enemySpawned = true;
             }
-
             if (LevelManager.money >= 100)
             {
                 SceneManager.LoadScene("TitleScreen");

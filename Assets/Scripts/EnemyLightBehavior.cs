@@ -15,6 +15,7 @@ public class EnemyLightBehavior : MonoBehaviour
     public Material hurtMaterial;
     public Material shipMaterial;
     private float timeStamp = 0;
+    public ParticleSystem explosion;
 
     // Update is called once per frame
     void Update()
@@ -26,6 +27,8 @@ public class EnemyLightBehavior : MonoBehaviour
         if (health <= 0)
         {
             LevelManager.money += 25;
+            ParticleSystem clone;
+            clone = Instantiate(explosion, transform.position, transform.rotation);
             Destroy(gameObject);
         }
         if (timeStamp <= Time.time)
