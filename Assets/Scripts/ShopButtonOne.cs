@@ -38,6 +38,7 @@ public class ShopButtonOne : MonoBehaviour
             {
                 PlayerHealth.maxHealth += 50;
             }
+            Destroy(gameObject);
         }
     }
 }

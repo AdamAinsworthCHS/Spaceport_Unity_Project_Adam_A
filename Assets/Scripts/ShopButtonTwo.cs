@@ -37,6 +37,7 @@ public class ShopButtonTwo : MonoBehaviour
             {
                 PlayerHealth.maxHealth += 50;
             }
+            Destroy(gameObject);
         }
     }
 }

@@ -38,6 +38,7 @@ public class ShopWeaponButton : MonoBehaviour
             {
                 PlayerWeapons.weaponType = "Cannon";
             }
+            Destroy(gameObject);
         }
     }
 }
