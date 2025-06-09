@@ -21,6 +21,7 @@ public class ShopWeaponButton : MonoBehaviour
     {
         if (LevelManager.money >= 100)
         {
+            MoneyText.playBuyAudio();
             LevelManager.money -= 100;
             if (ShopManager.weaponId == 1)
             {

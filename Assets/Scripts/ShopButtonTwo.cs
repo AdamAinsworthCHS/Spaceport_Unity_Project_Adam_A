@@ -20,6 +20,7 @@ public class ShopButtonTwo : MonoBehaviour
     void TaskOnClick()
     {
         if (LevelManager.money >= 100){
+            MoneyText.playBuyAudio();
             LevelManager.money -= 100;
             if (ShopManager.itemIdTwo == 1)
             {

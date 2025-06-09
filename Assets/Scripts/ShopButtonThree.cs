@@ -20,6 +20,7 @@ public class ShopButtonThree : MonoBehaviour
     void TaskOnClick()
     {
         if (LevelManager.money >= 100){
+            MoneyText.playBuyAudio();
             LevelManager.money -= 100;
             if (ShopManager.itemIdThree == 1)
             {
